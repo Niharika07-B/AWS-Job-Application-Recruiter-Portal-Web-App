@@ -1,0 +1,117 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Segoe UI', Arial, sans-serif;
+	background: #f4f7fa;
+}
+
+.header {
+	background: linear-gradient(90deg, #005bea 0%, #3ec6e0 100%);
+	color: #fff;
+	padding: 32px 0 20px 0;
+	text-align: center;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.form-container {
+	margin: 32px auto;
+	width: 100%;
+	max-width: 520px;
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+	padding: 32px 32px 24px 32px;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+
+h2 {
+	margin-bottom: 20px;
+	color: #005bea;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	width: 100%;
+}
+
+label {
+	font-weight: 600;
+	margin-bottom: 6px;
+	color: #222;
+}
+  
+input, textarea {
+	margin-bottom: 18px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+	padding: 12px;
+	margin-bottom: 18px;
+	border: 1.5px solid #b3c6e0;
+	border-radius: 6px;
+	width: 100%;
+	font-size: 16px;
+	background: #f8fbff;
+	transition: border 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+	border: 1.5px solid #005bea;
+	outline: none;
+}
+
+input[type="file"] {
+	margin-top: 6px;
+	margin-bottom: 18px;
+}
+
+button[type="submit"], input[type="submit"] {
+	background: linear-gradient(90deg, #005bea 0%, #3ec6e0 100%);
+	color: #fff;
+	padding: 12px 0;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	font-size: 18px;
+	font-weight: 600;
+	transition: background 0.2s;
+	margin-top: 8px;
+}
+
+button[type="submit"]:hover, input[type="submit"]:hover {
+	background: linear-gradient(90deg, #004bb5 0%, #2fa7c7 100%);
+}
+
+#submitmessage {
+	color: green;
+	margin-top: 10px;
+	text-align: center;
+	font-weight: 600;
+}
+
+.footer {
+	background-color: #222;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+	margin-top: 40px;
+	border-radius: 0 0 12px 12px;
+	font-size: 15px;
+	letter-spacing: 0.5px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+	.form-container {
+		padding: 18px 8px 16px 8px;
+	}
+}
+
