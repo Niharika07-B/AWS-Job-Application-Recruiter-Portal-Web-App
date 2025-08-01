@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recruiter Portal - Applications</title>
+    <link rel="stylesheet" href="recruiter.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Recruiter Portal</h1>
+        <button id="refreshBtn">Refresh Applications</button>
+    </div>
+    <div id="applications-container">
+        <table id="applications-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Position</th>
+                    <th>Resume</th>
+                </tr>
+            </thead>
+            <tbody id="applications-body">
+                <!-- Applications will be rendered here -->
+            </tbody>
+        </table>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 Recruiter Portal</p>
+    </div>
+    <script>
+        const apiUrl = "YOUR-ENDPOINT-URL"; // Update with your GET endpoint
+        const bucketName = "YOUR-BUCKET-NAME"; 
+
+        async function fetchApplications() {
+            const tbody = document.getElementById('applications-body');
+            tbody.innerHTML = '<tr><td colspan="5">Loading...</td></tr>';
+            try {
+                const res = await fetch(apiUrl);
+                const data = await res.json();
+                let applications = [];
+                if (data.body) {
+                    // API Gateway Lambda Proxy: body is a string
+                    const parsed = JSON.parse(data.body);
+                    applications = parsed.applications;
+                } else if (data.applications) {
+                    applications = data.applications;
+                }
+
+                tbody.innerHTML = '';
+                if (applications && applications.length > 0) {
+                    applications.forEach(app => {
+                        const tr = document.createElement('tr');
+                        // Extract the S3 key from the resume_url (after the first single slash)
+                        let s3Key = '';
+                        if (app.resume_url.startsWith('s3://')) {
+                            // Remove 's3://bucket-name/' prefix
+                            s3Key = app.resume_url.split('/').slice(3).join('/');
+                        }
+                        const resumeLink = `https://${bucketName}.s3.us-east-1.amazonaws.com/${s3Key}`;
+                        tr.innerHTML = `
+                            <td>${app.name}</td>
+                            <td>${app.email}</td>
+                            <td>${app.phone}</td>
+                            <td>${app.position}</td>
+                            <td>
+                                <a href="${resumeLink}" target="_blank">Open Resume</a>
+                            </td>
+                        `;
+                        tbody.appendChild(tr);
+                    });
+                } else {
+                    tbody.innerHTML = '<tr><td colspan="5">No applications found.</td></tr>';
+                }
+            } catch (err) {
+                tbody.innerHTML = `<tr><td colspan="5" style="color:red;">Error loading applications</td></tr>`;
+            }
+        }
+
+        document.getElementById('refreshBtn').onclick = fetchApplications;
+        window.onload = fetchApplications;
+    </script>
+</body>
+</html>
