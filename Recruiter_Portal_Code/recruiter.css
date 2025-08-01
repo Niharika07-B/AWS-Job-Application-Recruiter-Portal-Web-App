@@ -1,0 +1,89 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f7fa;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background: #2d3e50;
+    color: #fff;
+    padding: 30px 0 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+}
+
+#refreshBtn {
+    position: absolute;
+    right: 30px;
+    top: 35px;
+    background: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 22px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#refreshBtn:hover {
+    background: #388e3c;
+}
+
+#applications-container {
+    margin: 40px auto;
+    width: 90%;
+    max-width: 1100px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 30px 20px;
+}
+
+#applications-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+#applications-table th, #applications-table td {
+    padding: 14px 10px;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+}
+
+#applications-table th {
+    background: #f0f4f8;
+    color: #2d3e50;
+    font-weight: 600;
+}
+
+#applications-table tr:hover {
+    background: #f9fafb;
+}
+
+#applications-table a {
+    color: #1976d2;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#applications-table a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    text-align: center;
+    color: #888;
+    padding: 18px 0 10px 0;
+    font-size: 1em;
+    background: #f0f4f8;
+    margin-top: 40px;
+}
