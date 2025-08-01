@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Job Application Portal</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+  	<body>
+		<div id="submitmessage"></div>
+		<div class="header">
+			<h1>Job Application Portal</h1>
+			<p>
+				Apply for your dream job! Fill in your details and upload your resume below.
+			</p>
+		</div>
+		<div class="form-container">
+			<form onsubmit="submitApplication(event)">
+				<label for="name">Full Name:</label>
+				<input type="text" id="name" name="name" required placeholder="Enter your full name">
+
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required placeholder="Enter your email">
+
+				<label for="phone">Phone Number:</label>
+				<input type="text" id="phone" name="phone" required placeholder="Enter your phone number">
+
+				<label for="position">Position Applied For:</label>
+				<input type="text" id="position" name="position" required placeholder="e.g. Software Engineer">
+
+				<label for="education">Education:</label>
+				<input type="text" id="education" name="education" required placeholder="e.g. B.Sc. in Computer Science">
+
+				<label for="skills">Skills:</label>
+				<input type="text" id="skills" name="skills" required placeholder="e.g. JavaScript, Python, AWS">
+
+				<label for="resume">Resume (PDF/DOC):</label>
+				<input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+
+				<button type="submit">Submit Application</button>
+			</form>
+		</div>
+		<div class="footer">
+			<p>&copy; 2024 Job Application Portal</p>
+		</div>
+    
+		<script>
+			function submitApplication(event) {
+				event.preventDefault();
+
+				const name = document.getElementById("name").value;
+				const email = document.getElementById("email").value;
+				const phone = document.getElementById("phone").value;
+				const position = document.getElementById("position").value;
+				const education = document.getElementById("education").value;
+				const skills = document.getElementById("skills").value;
+				const resume = document.getElementById("resume").files[0];
+
+				if (!resume) {
+					alert("Please upload your resume.");
+					return;
+				}
+
+				const reader = new FileReader();
+
+				reader.onloadend = () => {
+					const base64Resume = reader.result.split(',')[1];
+
+					const formData = {
+						"name": name,
+						"email": email,
+						"phone": phone,
+						"position": position,
+						"education": education,
+						"skills": skills,
+						"resume": base64Resume,
+						"resumefilename": resume.name,
+						"resumetype": resume.type
+					};
+
+					fetch("YOUR-ENDPOINT-URL", {
+						method: "POST",
+						headers: {'Content-Type': 'application/json'},
+						body: JSON.stringify(formData)
+					})
+					.then(response => response.json())
+					.then(data => {
+						const messageDiv = document.getElementById("submitmessage");
+						messageDiv.innerHTML = "Application submitted successfully!";
+						messageDiv.style.color = "green";
+						document.getElementById("name").value = '';
+						document.getElementById("email").value = '';
+						document.getElementById("phone").value = '';
+						document.getElementById("position").value = '';
+						document.getElementById("education").value = '';
+						document.getElementById("skills").value = '';
+						document.getElementById("resume").value = '';
+					})
+					.catch(error => {
+						const messageDiv = document.getElementById("submitmessage");
+						messageDiv.innerHTML = "Error submitting application: " + error;
+						messageDiv.style.color = "red";
+					});
+				};
+
+				reader.readAsDataURL(resume);
+			}
+		</script>
+	</body>
+</html>
