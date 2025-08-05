@@ -11,7 +11,7 @@
       ],
         "Resource": [
           "arn:aws:s3:::your-bucket-name",
-          "arn:aws:s3:::your-bucket-name/*"
+          "arn:aws:s3:::your-bucket-name/*"    
       ]
       }
     ]
