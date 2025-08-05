@@ -28,7 +28,7 @@ A fully serverless job application platform that enables applicants to submit th
   + ⚡ Serverless architecture ensures high scalability and low cost
 
 ---
-
+     
 # 🧱 Architecture Diagram
 
 ![job-recruiter](https://github.com/user-attachments/assets/1e4c3919-da4b-4060-9e93-ac46ffaa1fb7)
