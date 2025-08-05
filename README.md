@@ -14,7 +14,7 @@ A fully serverless job application platform that enables applicants to submit th
 | File Storage | Amazon S3                            |
 
 ---
-
+ 
 # ✨ Key Features
 
   + 📄 Applicants can submit personal information and upload resumes
