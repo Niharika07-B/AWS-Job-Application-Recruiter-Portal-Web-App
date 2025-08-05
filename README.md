@@ -117,7 +117,7 @@ job-application-portal/
 
 ```
 ---
-___Give it a ⭐️ if you found it useful!___
+___Give it a ⭐️ if you found it useful!___    
 
 
 
