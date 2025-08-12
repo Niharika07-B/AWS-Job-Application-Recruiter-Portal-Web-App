@@ -1,3 +1,17 @@
+<div align="center">
+
+![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![AWS Lambda](https://img.shields.io/badge/AWS%20Lambda-FF9900?style=for-the-badge&logo=awslambda&logoColor=white)
+![API Gateway](https://img.shields.io/badge/API%20Gateway-FF4F00?style=for-the-badge&logo=amazonapigateway&logoColor=white)
+![Amazon DynamoDB](https://img.shields.io/badge/Amazon%20DynamoDB-4053D6?style=for-the-badge&logo=amazondynamodb&logoColor=white)
+![Amazon S3](https://img.shields.io/badge/Amazon%20S3-569A31?style=for-the-badge&logo=amazons3&logoColor=white)
+
+</div>
+
+
+
+
 # 💼 Job Application Recruiter Portal – Serverless Web Application Using AWS
 
 A fully serverless job application platform that enables applicants to submit their details and resumes, and allows recruiters to securely and efficiently view submitted applications. Built entirely using AWS services, the system is designed to run securely, scalably, and cost-effectively — even at zero cost within the AWS Free Tier.
@@ -6,12 +20,17 @@ A fully serverless job application platform that enables applicants to submit th
 
 # 🛠️ Tech Stack
 
+<div align="center">
+
+
 | Layer        | Technology                           |
 | ------------ | ------------------------------------ |
 | Frontend     | HTML, CSS (Hosted on S3)             |
 | Backend      | AWS Lambda (Python), API Gateway     |
 | Database     | Amazon DynamoDB                      |
 | File Storage | Amazon S3                            |
+
+</div>
 
 ---
  
@@ -117,7 +136,24 @@ job-application-portal/
 
 ```
 ---
+
 ___Give it a ⭐️ if you found it useful!___    
+
+---
+
+# </> with ♡ by Niharika B  
+
+📞 **Connect With Me – Gayatri G**
+
+📧 Email: [niharika.bandaru5002@gmail.com](mailto:niharika.bandaru5002@gmail.com)  
+💼 LinkedIn: [linkedin.com/in/niharika-bandaru](https://www.linkedin.com/in/niharika-bandaru/)  
+💻 GitHub: [github.com/Niharika07-B](https://github.com/Niharika07-B)
+
+
+---
+
+# 💬 **Let’s Connect!**  
+For queries, collaborations, or feedback, feel free to reach out via GitHub or LinkedIn.
 
 
 
