@@ -13,7 +13,7 @@
 
 
 # 💼 Job Application Recruiter Portal – Serverless Web Application Using AWS
- 
+  
 A fully serverless job application platform that enables applicants to submit their details and resumes, and allows recruiters to securely and efficiently view submitted applications. Built entirely using AWS services, the system is designed to run securely, scalably, and cost-effectively — even at zero cost within the AWS Free Tier.
 
 ---
