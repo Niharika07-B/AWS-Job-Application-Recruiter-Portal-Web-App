@@ -1,3 +1,15 @@
+
+<!-- 🌟 Job Recruiter Portal Landing Header - Modern Design -->
+<h1 align="center">
+  <img src="https://capsule-render.vercel.app/api?type=wave&color=32CD32&height=160&section=header&text=Job%20Application%20Recruiter%20Portal&fontSize=30&fontColor=ffffff&animation=fadeIn&fontAlignY=50"/>
+</h1>
+
+<h3 align="center" style="color:#90EE90;">
+📄 Submit Applications | 🔍 Review Candidates | ⚡ Fully Serverless on AWS
+</h3>
+
+
+
 <div align="center">
 
 ![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
@@ -154,6 +166,18 @@ ___Give it a ⭐️ if you found it useful!___
 
 # 💬 **Let’s Connect!**  
 For queries, collaborations, or feedback, feel free to reach out via GitHub or LinkedIn.
+
+<!-- 🌟 Job Recruiter Portal Landing Header - Modern Design -->
+<h1 align="center">
+<!-- 🌟 Job Recruiter Portal Landing Header - No Text -->
+<h1 align="center">
+  <img src="https://capsule-render.vercel.app/api?type=wave&color=32CD32&height=160&section=header&animation=fadeIn"/>
+</h1>
+</h1>
+
+<h3 align="center" style="color:#90EE90;">
+📄 Submit Applications | 🔍 Review Candidates | ⚡ Fully Serverless on AWS
+</h3>
 
 
 
