@@ -5,7 +5,6 @@
 </h1>
 
 <h3 align="center" style="color:#90EE90;">
-📄 Submit Applications | 🔍 Review Candidates | ⚡ Fully Serverless on AWS
 </h3>
 
 
