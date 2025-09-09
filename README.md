@@ -143,7 +143,7 @@ ___Give it a ⭐️ if you found it useful!___
 
 # </> with ♡ by Niharika B  
 
-📞 **Connect With Me – Gayatri G**
+📞 **Connect With Me – Niharika B**
 
 📧 Email: [niharika.bandaru5002@gmail.com](mailto:niharika.bandaru5002@gmail.com)  
 💼 LinkedIn: [linkedin.com/in/niharika-bandaru](https://www.linkedin.com/in/niharika-bandaru/)  
